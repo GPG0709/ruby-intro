@@ -15,3 +15,9 @@
 # rand(1..6)
 # Log output to the screen with puts:
 # puts "Hello, world"
+
+dice1 = rand(1..6)
+dice2 = rand(1..6)
+total = dice1 + dice2
+puts "(#{dice1},#{dice2})"
+puts total

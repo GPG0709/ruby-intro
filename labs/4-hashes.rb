@@ -25,8 +25,17 @@ bitcoin_data = JSON.parse(response)
 puts "How much bitcoin do you have?"
 bitcoin = gets.chomp
 
+
 # 2. The value will be a string, so you'll want to convert it to a Float.
 bitcoin = bitcoin.to_f
 
+bitcoin_price_usd = bitcoin_data["bpi"]["USD"]["rate_float"]
+
+puts "1 bitcoin is worth #{bitcoin_price_usd}"
+
+value_usd = bitcoin_price_usd*bitcoin
+puts "You have #{value_usd}"
+
 # 3. inspect the bitcoin_data hash
-# puts bitcoin_data
+#puts bitcoin_data
+
